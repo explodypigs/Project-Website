@@ -6,16 +6,10 @@ import Page1 from './containers/Pages/Food_page'
 import Page2 from './containers/Pages/CharecteristicsPage'
 import Page3 from './containers/Pages/Migration page'
 import { BrowserRouter,Switch, Route } from 'react-router-dom'
-import useWindowDimensions from './windowDimensions'
 
-const App = () => {
-  const {height,width}=useWindowDimensions()
-    return(
+const App = () => (
     <BrowserRouter>
         <Head/>
-        {height}<br/>
-        {width}
-        <br/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/food' component={Page1}/>
@@ -23,7 +17,7 @@ const App = () => {
           <Route path='/migration' component={Page3}/>
         </Switch>
         <NoteList/>
-    </BrowserRouter>)
-}
+    </BrowserRouter>
+  )
 
 export default App
