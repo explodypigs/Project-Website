@@ -1,6 +1,17 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+var transition = keyframes`
+    from {
+    left:700px;
+  }
+
+  to {
+    left:0px;
+  }
+`;
 
 export const Middle_div=styled.div`
+    animation: ${transition} 1s linear 1;
     border: 2px solid darkseagreen;
     display: block;
     margin-left: auto;
@@ -65,3 +76,16 @@ export const InputStyle=styled.input`
         padding:6px;
     }
 `
+var spin = keyframes`
+    from {
+    left:700px;
+  }
+
+  to {
+    left:0px;
+  }
+`;
+export const Page=styled.div`
+    position:relative;
+    animation: ${spin} 1s linear 1;
+`;
